@@ -3,7 +3,7 @@ import FadeIn from "./FadeIn";
 const tiers = [
   {
     name: "Foundation",
-    price: "$1,500",
+    price: "$1,000",
     period: "/mo",
     features: [
       "Messaging and positioning",
@@ -16,7 +16,7 @@ const tiers = [
   },
   {
     name: "Growth",
-    price: "$3,000",
+    price: "$2,000",
     period: "/mo",
     features: [
       "Everything in Foundation",
