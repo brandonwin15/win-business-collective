@@ -17,8 +17,15 @@ export default function InquiryForm() {
   const [selected, setSelected] = useState<string>("");
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    await fetch("https://formspree.io/f/xbdqjpvq", {
+      method: "POST",
+      body: data,
+      headers: { Accept: "application/json" },
+    });
     setSubmitted(true);
   };
 
@@ -78,6 +85,7 @@ export default function InquiryForm() {
               </label>
               <input
                 id="name"
+                name="name"
                 type="text"
                 required
                 placeholder="Your name"
@@ -95,6 +103,7 @@ export default function InquiryForm() {
               </label>
               <input
                 id="email"
+                name="email"
                 type="email"
                 required
                 placeholder="you@company.com"
@@ -112,6 +121,7 @@ export default function InquiryForm() {
               </label>
               <input
                 id="company"
+                name="company"
                 type="text"
                 required
                 placeholder="Your company or firm"
@@ -166,6 +176,7 @@ export default function InquiryForm() {
               </label>
               <textarea
                 id="message"
+                name="message"
                 required
                 rows={5}
                 placeholder="Tell us what's not working — or what you're trying to make happen."
