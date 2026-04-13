@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #0a0a0a;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer base {
+  h1, h2, h3, h4 {
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Subtle dot-grid texture for white body sections */
+.dot-grid {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.055) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+/* Gold button glow on hover */
+.btn-gold {
+  transition: background-color 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn-gold:hover {
+  box-shadow: 0 0 22px 5px rgba(201, 169, 110, 0.28);
+}
+
+/* Outlined button gold hover glow */
+.btn-outline {
+  transition: border-color 0.2s ease, color 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn-outline:hover {
+  box-shadow: 0 0 18px 3px rgba(201, 169, 110, 0.18);
+}
+
+/* Card lift */
+.card-lift {
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.card-lift:hover {
+  transform: translateY(-3px) scale(1.015);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+.card-lift-dark:hover {
+  box-shadow: 0 16px 40px rgba(201, 169, 110, 0.12);
+}
