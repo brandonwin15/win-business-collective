@@ -1,38 +1,9 @@
-'use client';
-
 import Link from "next/link";
-
-const posts = [
-  {
-    tag: "AI + Marketing",
-    date: "April 14, 2026",
-    title: "AI Won't Replace Your Marketing Team. Bad Briefing Will.",
-    excerpt:
-      "Most founders think the bottleneck is output. It's not. It's input. If you can't articulate what makes your product different, no AI in the world will figure that out for you — and your content will prove it.",
-    readTime: "5 min read",
-    slug: "ai-wont-replace-your-marketing-team",
-  },
-  {
-    tag: "Fintech",
-    date: "April 7, 2026",
-    title: "Why Your Fintech's Messaging Sounds Like Everyone Else's",
-    excerpt:
-      "Secure. Seamless. Scalable. If those three words are anywhere on your homepage, we need to talk. Here's what's actually happening to your conversion rate — and the three rewrites that fix it.",
-    readTime: "7 min read",
-    slug: "why-your-fintech-messaging-sounds-the-same",
-  },
-  {
-    tag: "Strategy",
-    date: "March 31, 2026",
-    title: "The Human Voice Problem: What AI Content Gets Wrong About Trust",
-    excerpt:
-      "People don't distrust AI because it's artificial. They distrust it because it sounds like it's hiding something. Speed is great. But if your audience feels like they're reading a press release from a company that doesn't exist, you've already lost.",
-    readTime: "6 min read",
-    slug: "the-human-voice-problem",
-  },
-];
+import { getAllPosts } from "../../lib/posts";
 
 export default function BlogPage() {
+  const posts = getAllPosts();
+
   return (
     <main
       style={{ fontFamily: "'DM Sans', sans-serif" }}
@@ -107,17 +78,7 @@ export default function BlogPage() {
             <div className="shrink-0">
               <a
                 href="/#inquiry"
-                className="inline-block px-8 py-4 rounded-lg text-sm font-medium tracking-wide transition-all duration-200"
-                style={{
-                  background: "#c4a364",
-                  color: "#0d0d0d",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = "#d4b574";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = "#c4a364";
-                }}
+                className="inline-block px-8 py-4 rounded-lg text-sm font-medium tracking-wide transition-all duration-200 bg-[#c4a364] hover:bg-[#d4b574] text-[#0d0d0d]"
               >
                 Book a Call →
               </a>
@@ -200,16 +161,6 @@ export default function BlogPage() {
               </div>
             </article>
           ))}
-        </div>
-
-        {/* View all link */}
-        <div className="mt-10 text-center">
-          <Link
-            href="/blog/all"
-            className="inline-block text-sm text-[#5a544e] hover:text-[#c4a364] transition-colors tracking-wide"
-          >
-            View all posts →
-          </Link>
         </div>
       </section>
     </main>

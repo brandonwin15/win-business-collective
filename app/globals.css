@@ -66,3 +66,71 @@ body {
 .card-lift-dark:hover {
   box-shadow: 0 16px 40px rgba(201, 169, 110, 0.12);
 }
+
+/* Blog post body typography */
+.prose-post h1,
+.prose-post h2,
+.prose-post h3,
+.prose-post h4 {
+  font-family: 'Playfair Display', serif;
+  color: #f0ece4;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.prose-post h1 { font-size: 2.25rem; font-weight: 800; }
+.prose-post h2 { font-size: 1.6rem; font-weight: 700; }
+.prose-post h3 { font-size: 1.25rem; font-weight: 700; }
+
+.prose-post p {
+  color: #a09a90;
+  line-height: 1.85;
+  margin-bottom: 1.5rem;
+  font-size: 1.0625rem;
+  font-weight: 300;
+}
+
+.prose-post strong {
+  color: #d4c9b8;
+  font-weight: 600;
+}
+
+.prose-post ul,
+.prose-post ol {
+  color: #a09a90;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.85;
+  font-size: 1.0625rem;
+  font-weight: 300;
+}
+
+.prose-post li {
+  margin-bottom: 0.5rem;
+}
+
+.prose-post blockquote {
+  border-left: 3px solid #c4a364;
+  padding-left: 1.25rem;
+  margin: 2rem 0;
+  color: #8a8278;
+  font-style: italic;
+}
+
+.prose-post a {
+  color: #c4a364;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.prose-post a:hover {
+  color: #d4b574;
+}
+
+.prose-post hr {
+  border: none;
+  border-top: 1px solid rgba(196,163,100,0.2);
+  margin: 2.5rem 0;
+}
