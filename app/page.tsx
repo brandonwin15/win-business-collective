@@ -7,6 +7,7 @@ import Pricing from "./components/Pricing";
 import Proof from "./components/Proof";
 import About from "./components/About";
 import InquiryForm from "./components/InquiryForm";
+import Testimonials from "./components/Testimonials";
 import Footer from "./components/Footer";
 import AngleDivider from "./components/AngleDivider";
 
@@ -42,6 +43,8 @@ export default function Home() {
         {/* ─── white → off-white ─── */}
         <About />
         <AngleDivider from="#ffffff" to="#f5f4f2" direction="left"  height={44} />
+
+        <Testimonials />
 
         <InquiryForm />
       </main>
