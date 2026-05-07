@@ -33,7 +33,7 @@ export default function FinancialLiteracy() {
           -webkit-font-smoothing: antialiased;
         }
 
-        /* ─── HERO ─── */
+        /* HERO */
         .fl-hero {
           background: var(--ink);
           color: var(--warm-white);
@@ -96,7 +96,7 @@ export default function FinancialLiteracy() {
           margin: 40px 0 0;
         }
 
-        /* ─── CONTENT SECTIONS ─── */
+        /* CONTENT SECTIONS */
         .fl-body {
           max-width: 720px;
           margin: 0 auto;
@@ -141,7 +141,110 @@ export default function FinancialLiteracy() {
           margin-top: 18px;
         }
 
-        /* ─── BELIEF CALLOUTS ─── */
+        /* BIO CARD */
+        .fl-bio-card {
+          margin-top: 36px;
+          padding: 36px;
+          background: var(--parchment);
+          border-left: 3px solid var(--accent);
+        }
+
+        .fl-bio-name {
+          font-family: var(--serif);
+          font-size: 22px;
+          font-weight: 400;
+          color: var(--ink);
+          margin-bottom: 6px;
+        }
+
+        .fl-bio-title {
+          font-size: 11px;
+          font-weight: 500;
+          letter-spacing: 0.15em;
+          text-transform: uppercase;
+          color: var(--accent);
+          margin-bottom: 20px;
+        }
+
+        .fl-bio-text {
+          font-size: 16px;
+          line-height: 1.8;
+          color: #3d3730;
+          font-weight: 300;
+        }
+
+        /* PRICING */
+        .fl-pricing-grid {
+          margin-top: 32px;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 20px;
+        }
+
+        @media (max-width: 560px) {
+          .fl-pricing-grid { grid-template-columns: 1fr; }
+          .fl-for-list { grid-template-columns: 1fr; }
+        }
+
+        .fl-pricing-card {
+          padding: 32px 28px;
+          border: 1px solid var(--sand);
+          background: var(--warm-white);
+        }
+
+        .fl-pricing-card-featured {
+          background: var(--ink);
+          border-color: var(--ink);
+        }
+
+        .fl-pricing-type {
+          font-size: 10px;
+          font-weight: 500;
+          letter-spacing: 0.2em;
+          text-transform: uppercase;
+          color: var(--accent);
+          margin-bottom: 16px;
+        }
+
+        .fl-pricing-card-featured .fl-pricing-type {
+          color: var(--accent-soft);
+        }
+
+        .fl-pricing-price {
+          font-family: var(--serif);
+          font-size: 44px;
+          font-weight: 400;
+          color: var(--ink);
+          line-height: 1;
+          margin-bottom: 4px;
+        }
+
+        .fl-pricing-card-featured .fl-pricing-price {
+          color: var(--warm-white);
+        }
+
+        .fl-pricing-unit {
+          font-size: 13px;
+          color: var(--muted);
+          margin-bottom: 20px;
+        }
+
+        .fl-pricing-card-featured .fl-pricing-unit {
+          color: rgba(250,248,244,0.55);
+        }
+
+        .fl-pricing-desc {
+          font-size: 15px;
+          line-height: 1.6;
+          color: #3d3730;
+          font-weight: 300;
+        }
+
+        .fl-pricing-card-featured .fl-pricing-desc {
+          color: rgba(250,248,244,0.75);
+        }
+
+        /* BELIEF CALLOUTS */
         .fl-beliefs {
           margin-top: 36px;
           display: flex;
@@ -174,16 +277,12 @@ export default function FinancialLiteracy() {
           font-weight: 400;
         }
 
-        /* ─── WHO IT'S FOR ─── */
+        /* WHO IT'S FOR */
         .fl-for-list {
           margin-top: 32px;
           display: grid;
           grid-template-columns: 1fr 1fr;
           gap: 16px;
-        }
-
-        @media (max-width: 560px) {
-          .fl-for-list { grid-template-columns: 1fr; }
         }
 
         .fl-for-item {
@@ -203,14 +302,52 @@ export default function FinancialLiteracy() {
           margin-bottom: 8px;
         }
 
-        /* ─── DIVIDER ─── */
+        /* DIVIDER */
         .fl-rule {
           border: none;
           border-top: 1px solid var(--sand);
           margin: 0;
         }
 
-        /* ─── DISCLAIMER ─── */
+        /* REACH OUT STRIP */
+        .fl-reach-strip {
+          background: var(--accent);
+          padding: 60px 24px;
+          text-align: center;
+        }
+
+        .fl-reach-heading {
+          font-family: var(--serif);
+          font-size: clamp(24px, 3.5vw, 36px);
+          color: var(--warm-white);
+          margin-bottom: 12px;
+          font-weight: 400;
+        }
+
+        .fl-reach-sub {
+          font-size: 16px;
+          color: rgba(250,248,244,0.8);
+          margin-bottom: 24px;
+          font-weight: 300;
+        }
+
+        .fl-reach-email {
+          display: inline-block;
+          font-family: var(--sans);
+          font-size: 16px;
+          font-weight: 500;
+          color: var(--warm-white);
+          text-decoration: underline;
+          text-underline-offset: 4px;
+          letter-spacing: 0.02em;
+          transition: opacity 0.2s;
+        }
+
+        .fl-reach-email:hover {
+          opacity: 0.75;
+        }
+
+        /* DISCLAIMER */
         .fl-disclaimer {
           background: var(--parchment);
           border-top: 1px solid var(--sand);
@@ -238,56 +375,13 @@ export default function FinancialLiteracy() {
           max-width: 640px;
         }
 
-        /* ─── CTA STRIP ─── */
-        .fl-cta-strip {
-          background: var(--accent);
-          padding: 60px 24px;
-          text-align: center;
-        }
-
-        .fl-cta-heading {
-          font-family: var(--serif);
-          font-size: clamp(24px, 3.5vw, 36px);
-          color: var(--warm-white);
-          margin-bottom: 12px;
-          font-weight: 400;
-        }
-
-        .fl-cta-sub {
-          font-size: 16px;
-          color: rgba(250,248,244,0.8);
-          margin-bottom: 32px;
-          font-weight: 300;
-        }
-
-        .fl-cta-btn {
-          display: inline-block;
-          background: var(--warm-white);
-          color: var(--accent);
-          font-family: var(--sans);
-          font-size: 14px;
-          font-weight: 500;
-          letter-spacing: 0.08em;
-          text-transform: uppercase;
-          text-decoration: none;
-          padding: 16px 36px;
-          transition: background 0.2s, color 0.2s;
-        }
-
-        .fl-cta-btn:hover {
-          background: var(--ink);
-          color: var(--warm-white);
-        }
-
-        /* ─── ANIMATIONS ─── */
+        /* ANIMATIONS */
         @keyframes fadeUp {
           from { opacity: 0; transform: translateY(20px); }
           to   { opacity: 1; transform: translateY(0); }
         }
 
-        .fl-hero-inner > * {
-          animation: fadeUp 0.7s ease both;
-        }
+        .fl-hero-inner > * { animation: fadeUp 0.7s ease both; }
         .fl-eyebrow        { animation-delay: 0.0s; }
         .fl-hero-headline  { animation-delay: 0.12s; }
         .fl-hero-sub       { animation-delay: 0.24s; }
@@ -296,7 +390,7 @@ export default function FinancialLiteracy() {
 
       <div className="fl-page">
 
-        {/* ── HERO ── */}
+        {/* HERO */}
         <section className="fl-hero">
           <div className="fl-hero-inner">
             <p className="fl-eyebrow">Win Business Collective · Financial Literacy</p>
@@ -306,33 +400,47 @@ export default function FinancialLiteracy() {
             </h1>
             <p className="fl-hero-sub">
               Win Business Collective brings financial literacy education and coaching to everyday
-              people — no products, no sales pitch, no Wall Street jargon. Just the foundation
+              people: no products, no sales pitch, no Wall Street jargon. Just the foundation
               you should have had years ago.
             </p>
             <div className="fl-divider-line" />
           </div>
         </section>
 
-        {/* ── BODY ── */}
+        {/* BODY */}
         <div className="fl-body">
 
-          {/* About */}
+          {/* About + Bio */}
           <section className="fl-section">
             <p className="fl-section-label">About This Work</p>
             <h2 className="fl-section-heading">Why I do this</h2>
             <div className="fl-section-body">
               <p>
                 I started in tech. Moved into finance. Spent years inside an industry that had
-                every tool to help people build wealth — and watched most of those tools get aimed
+                every tool to help people build wealth, and watched most of those tools get aimed
                 at the wrong goal.
               </p>
               <p>
                 What I learned is that the basics matter more than anything else. Budgeting.
-                Understanding debt. Knowing what investing actually means for your life — not
+                Understanding debt. Knowing what investing actually means for your life, not
                 someone else's portfolio. Building habits that hold.
               </p>
               <p>
                 Nobody taught me that early enough. So now I teach it.
+              </p>
+            </div>
+
+            <div className="fl-bio-card">
+              <p className="fl-bio-name">Brandon Win</p>
+              <p className="fl-bio-title">Founder · FINRA Series 7 &amp; 66 Licensed</p>
+              <p className="fl-bio-text">
+                Brandon Win is the founder of Win Business Collective and a licensed
+                ex-financial professional (FINRA Series 7 and 66) who started working young,
+                spent years in tech and fintech, and didn't learn the real rules of money until
+                he was deep in the financial services industry. Now he teaches others what he had
+                to figure out the hard way. His approach isn't strictly about products or
+                portfolios. It's about habits, smart decisions, and building a financial life
+                that actually fits how you live.
               </p>
             </div>
           </section>
@@ -349,9 +457,37 @@ export default function FinancialLiteracy() {
                 manage your money. I don't sell products. I don't have a fund to put you in.
               </p>
               <p>
-                What I do is help you understand your money — where it's going, what it's doing,
+                What I do is help you understand your money: where it's going, what it's doing,
                 and how to make decisions that actually make sense for your life.
               </p>
+            </div>
+          </section>
+
+          <hr className="fl-rule" style={{ marginTop: "80px" }} />
+
+          {/* Pricing */}
+          <section className="fl-section">
+            <p className="fl-section-label">Sessions &amp; Pricing</p>
+            <h2 className="fl-section-heading">Pick the format that fits you</h2>
+            <div className="fl-pricing-grid">
+              <div className="fl-pricing-card">
+                <p className="fl-pricing-type">Personal Sessions</p>
+                <p className="fl-pricing-price">$50</p>
+                <p className="fl-pricing-unit">per hour</p>
+                <p className="fl-pricing-desc">
+                  One-on-one coaching built around your situation. We go at your pace and focus
+                  on what actually matters for where you are right now.
+                </p>
+              </div>
+              <div className="fl-pricing-card fl-pricing-card-featured">
+                <p className="fl-pricing-type">Community Course</p>
+                <p className="fl-pricing-price">$150</p>
+                <p className="fl-pricing-unit">per 1-hour session</p>
+                <p className="fl-pricing-desc">
+                  Group sessions covering the foundations most people were never taught. Learn
+                  alongside others who are starting from the same place.
+                </p>
+              </div>
             </div>
           </section>
 
@@ -378,8 +514,8 @@ export default function FinancialLiteracy() {
               <div className="fl-belief-item">
                 <span className="fl-belief-num">03</span>
                 <p className="fl-belief-text">
-                  The most powerful thing most people can do isn't find the right stock — it's
-                  build the right habits.
+                  The most powerful thing most people can do isn't find the right stock.
+                  It's build the right habits.
                 </p>
               </div>
             </div>
@@ -412,14 +548,16 @@ export default function FinancialLiteracy() {
 
         </div>
 
-        {/* ── CTA STRIP ── */}
-        <div className="fl-cta-strip">
-          <h2 className="fl-cta-heading">Ready to start from the beginning?</h2>
-          <p className="fl-cta-sub">No pressure. No pitch. Just a conversation.</p>
-          <a href="/contact" className="fl-cta-btn">Get in Touch</a>
+        {/* REACH OUT */}
+        <div className="fl-reach-strip">
+          <h2 className="fl-reach-heading">Ready to start from the beginning?</h2>
+          <p className="fl-reach-sub">No pressure. No pitch. Just a conversation.</p>
+          <a href="mailto:brandon@winbusinesscollective.com" className="fl-reach-email">
+            brandon@winbusinesscollective.com
+          </a>
         </div>
 
-        {/* ── DISCLAIMER ── */}
+        {/* DISCLAIMER */}
         <div className="fl-disclaimer">
           <div className="fl-disclaimer-inner">
             <p className="fl-disclaimer-label">Disclaimer</p>
