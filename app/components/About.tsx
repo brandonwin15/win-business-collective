@@ -64,17 +64,11 @@ export default function About() {
               </div>
 
               {/* Bio */}
-              <div style={{ display: "flex", gap: "28px", alignItems: "flex-start" }}>
+              <div className="flex flex-col sm:flex-row items-start gap-12">
                 <img
                   src="/images/Brandon_Win_Pic2.jpg"
-                  alt="Brandon Win"
-                  style={{
-                    width: "220px",
-                    flexShrink: 0,
-                    objectFit: "cover",
-                    objectPosition: "top center",
-                    alignSelf: "stretch",
-                  }}
+                  alt="Brandon Win, founder of Win Business Collective"
+                  className="w-full sm:w-[240px] h-[300px] object-cover object-top shrink-0"
                 />
                 <p className="text-gray-300 text-[16px] leading-relaxed">
                   I spent a decade at the intersection of financial services and product
