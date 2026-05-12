@@ -64,13 +64,26 @@ export default function About() {
               </div>
 
               {/* Bio */}
-              <p className="text-gray-300 text-[16px] leading-relaxed">
-                I spent a decade at the intersection of financial services and product
-                marketing. I&apos;ve sat in advisor reviews, helped raise capital, and built
-                GTM strategies for products that were hard to explain to buyers who
-                were hard to impress. I built Win Business Collective for founders and
-                firms who are done sounding like everyone else.
-              </p>
+              <div style={{ display: "flex", gap: "28px", alignItems: "flex-start" }}>
+                <img
+                  src="/images/Brandon_Win_Pic2.jpg"
+                  alt="Brandon Win"
+                  style={{
+                    width: "220px",
+                    flexShrink: 0,
+                    objectFit: "cover",
+                    objectPosition: "top center",
+                    alignSelf: "stretch",
+                  }}
+                />
+                <p className="text-gray-300 text-[16px] leading-relaxed">
+                  I spent a decade at the intersection of financial services and product
+                  marketing. I&apos;ve sat in advisor reviews, helped raise capital, and built
+                  GTM strategies for products that were hard to explain to buyers who
+                  were hard to impress. I built Win Business Collective for founders and
+                  firms who are done sounding like everyone else.
+                </p>
+              </div>
             </div>
           </div>
         </FadeIn>

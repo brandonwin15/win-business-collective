@@ -28,6 +28,15 @@ export default function Home() {
         <TheProblem />
         <AngleDivider from="#f5f4f2" to="#ffffff" direction="left"  height={44} />
 
+        {/* ─── full-width image banner ─── */}
+        <div style={{ width: "100%", height: "320px", overflow: "hidden" }}>
+          <img
+            src="/images/pexels-akilmazumder-5550910.jpg"
+            alt=""
+            style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+          />
+        </div>
+
         {/* ─── white → off-white ─── */}
         <Services />
         <AngleDivider from="#ffffff" to="#f5f4f2" direction="right" height={44} />
@@ -47,6 +56,15 @@ export default function Home() {
         <Testimonials />
 
         <InquiryForm />
+
+        {/* ─── full-width image banner ─── */}
+        <div style={{ width: "100%", height: "320px", overflow: "hidden" }}>
+          <img
+            src="/images/pexels-bagus-prabangkara-2151566592-33631184.jpg"
+            alt=""
+            style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+          />
+        </div>
       </main>
       <Footer />
     </>
