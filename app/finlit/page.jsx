@@ -1,3 +1,6 @@
+// app/finlit/page.jsx
+// Images must be in /public/images/
+
 export const metadata = {
   title: "Financial Literacy Education & Coaching | Win Business Collective",
   description:
@@ -96,6 +99,29 @@ export default function FinancialLiteracy() {
           margin: 40px 0 0;
         }
 
+        /* HERO BANNER IMAGE */
+        .fl-banner-img {
+          width: 100%;
+          height: 360px;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .fl-banner-img img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center 60%;
+          display: block;
+        }
+
+        .fl-banner-img::after {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(to bottom, rgba(26,23,20,0.25) 0%, rgba(26,23,20,0.05) 100%);
+        }
+
         /* CONTENT SECTIONS */
         .fl-body {
           max-width: 720px;
@@ -141,12 +167,41 @@ export default function FinancialLiteracy() {
           margin-top: 18px;
         }
 
-        /* BIO CARD */
+        /* BIO CARD WITH PHOTO */
         .fl-bio-card {
           margin-top: 36px;
-          padding: 36px;
           background: var(--parchment);
           border-left: 3px solid var(--accent);
+          display: grid;
+          grid-template-columns: 200px 1fr;
+          overflow: hidden;
+        }
+
+        @media (max-width: 600px) {
+          .fl-bio-card {
+            grid-template-columns: 1fr;
+          }
+          .fl-bio-photo {
+            height: 280px !important;
+          }
+        }
+
+        .fl-bio-photo {
+          position: relative;
+          height: 100%;
+          min-height: 280px;
+        }
+
+        .fl-bio-photo img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: top center;
+          display: block;
+        }
+
+        .fl-bio-content {
+          padding: 32px;
         }
 
         .fl-bio-name {
@@ -167,10 +222,34 @@ export default function FinancialLiteracy() {
         }
 
         .fl-bio-text {
-          font-size: 16px;
+          font-size: 15px;
           line-height: 1.8;
           color: #3d3730;
           font-weight: 300;
+        }
+
+        /* SECTION IMAGE (full-width between sections) */
+        .fl-section-img {
+          width: 100%;
+          height: 300px;
+          position: relative;
+          overflow: hidden;
+          margin-top: 80px;
+        }
+
+        .fl-section-img img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          display: block;
+        }
+
+        .fl-section-img::after {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: rgba(26,23,20,0.12);
         }
 
         /* PRICING */
@@ -343,9 +422,7 @@ export default function FinancialLiteracy() {
           transition: opacity 0.2s;
         }
 
-        .fl-reach-email:hover {
-          opacity: 0.75;
-        }
+        .fl-reach-email:hover { opacity: 0.75; }
 
         /* DISCLAIMER */
         .fl-disclaimer {
@@ -407,6 +484,14 @@ export default function FinancialLiteracy() {
           </div>
         </section>
 
+        {/* BANNER IMAGE — plant growing from coins */}
+        <div className="fl-banner-img">
+          <img
+            src="/images/pexels-akilmazumder-5550910.jpg"
+            alt="A seedling growing from a handful of coins — financial growth"
+          />
+        </div>
+
         {/* BODY */}
         <div className="fl-body">
 
@@ -430,18 +515,27 @@ export default function FinancialLiteracy() {
               </p>
             </div>
 
+            {/* Bio Card with headshot */}
             <div className="fl-bio-card">
-              <p className="fl-bio-name">Brandon Win</p>
-              <p className="fl-bio-title">Founder · FINRA Series 7 &amp; 66 Licensed</p>
-              <p className="fl-bio-text">
-                Brandon Win is the founder of Win Business Collective and a licensed
-                ex-financial professional (FINRA Series 7 and 66) who started working young,
-                spent years in tech and fintech, and didn't learn the real rules of money until
-                he was deep in the financial services industry. Now he teaches others what he had
-                to figure out the hard way. His approach isn't strictly about products or
-                portfolios. It's about habits, smart decisions, and building a financial life
-                that actually fits how you live.
-              </p>
+              <div className="fl-bio-photo">
+                <img
+                  src="/images/Brandon_Win_Pic2.jpg"
+                  alt="Brandon Win, founder of Win Business Collective"
+                />
+              </div>
+              <div className="fl-bio-content">
+                <p className="fl-bio-name">Brandon Win</p>
+                <p className="fl-bio-title">Founder · FINRA Series 7 &amp; 66 Licensed</p>
+                <p className="fl-bio-text">
+                  Brandon Win is the founder of Win Business Collective and a licensed
+                  ex-financial professional (FINRA Series 7 and 66) who started working young,
+                  spent years in tech and fintech, and didn't learn the real rules of money until
+                  he was deep in the financial services industry. Now he teaches others what he had
+                  to figure out the hard way. His approach isn't strictly about products or
+                  portfolios. It's about habits, smart decisions, and building a financial life
+                  that actually fits how you live.
+                </p>
+              </div>
             </div>
           </section>
 
@@ -491,7 +585,17 @@ export default function FinancialLiteracy() {
             </div>
           </section>
 
-          <hr className="fl-rule" style={{ marginTop: "80px" }} />
+        </div>
+
+        {/* SECTION IMAGE — autumn stacked stones (balance / patience) */}
+        <div className="fl-section-img" style={{ marginTop: "80px" }}>
+          <img
+            src="/images/pexels-gorkemraw-28425270.jpg"
+            alt="Stacked stones balanced by a river in autumn — patience and intention"
+          />
+        </div>
+
+        <div className="fl-body">
 
           {/* What I Believe */}
           <section className="fl-section">
@@ -522,6 +626,18 @@ export default function FinancialLiteracy() {
           </section>
 
           <hr className="fl-rule" style={{ marginTop: "80px" }} />
+
+        </div>
+
+        {/* SECTION IMAGE — person on bench by lake (everyday person, reflective) */}
+        <div className="fl-section-img">
+          <img
+            src="/images/pexels-emanuel-prado-83498916-34720075.jpg"
+            alt="A person sitting quietly by a lake under the trees"
+          />
+        </div>
+
+        <div className="fl-body">
 
           {/* Who It's For */}
           <section className="fl-section">
